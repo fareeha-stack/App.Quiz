@@ -21,6 +21,106 @@
                 correctAnswer: 2
             },
             {
+    question: "Which HTML tag is used to insert an image?",
+    options: [
+        "<img>",
+        "<image>",
+        "<src>",
+        "<pic>"
+    ],
+    correctAnswer: 0
+},
+{
+    question: "Which CSS property controls text size?",
+    options: [
+        "font-style",
+        "text-size",
+        "font-size",
+        "text-style"
+    ],
+    correctAnswer: 2
+},
+{
+    question: "Which JavaScript function is used to display output in the browser console?",
+    options: [
+        "console.log()",
+        "print()",
+        "log.console()",
+        "display()"
+    ],
+    correctAnswer: 0
+},
+{
+    question: "Which HTML tag is used for the largest heading?",
+    options: [
+        "<heading>",
+        "<h6>",
+        "<h1>",
+        "<head>"
+    ],
+    correctAnswer: 2
+},
+{
+    question: "Which CSS property is used to change background color?",
+    options: [
+        "background-style",
+        "background-color",
+        "color-background",
+        "bg-color"
+    ],
+    correctAnswer: 1
+},
+{
+    question: "Which symbol is used for comments in CSS?",
+    options: [
+        "// comment",
+        "<!-- comment -->",
+        "/* comment */",
+        "# comment"
+    ],
+    correctAnswer: 2
+},
+{
+    question: "Which JavaScript keyword is used to create a function?",
+    options: [
+        "create",
+        "function",
+        "method",
+        "define"
+    ],
+    correctAnswer: 1
+},
+{
+    question: "Which HTML tag is used to create an unordered list?",
+    options: [
+        "<ol>",
+        "<ul>",
+        "<li>",
+        "<list>"
+    ],
+    correctAnswer: 1
+},
+{
+    question: "Which CSS property is used to center text?",
+    options: [
+        "align-text",
+        "text-align",
+        "center-text",
+        "font-align"
+    ],
+    correctAnswer: 1
+},
+{
+    question: "Which JavaScript operator is used to assign a value to a variable?",
+    options: [
+        "=",
+        "==",
+        "===",
+        "!="
+    ],
+    correctAnswer: 0
+},
+            {
                 question: "In JavaScript, which keyword is used to declare a variable?",
                 options: [
                     "var",
@@ -254,8 +354,8 @@
 
         // Update progress bar
         function updateProgress() {
-            const progressPercent = ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
-            progressFill.style.width = `${progressPercent}%`;
+            const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+    progressFill.style.width = `${progressPercent}%`;
         }
 
         // Handle next button click
@@ -278,6 +378,7 @@
 
         // Show final results
         function showResults() {
+            progressFill.style.width = "100%";
             // Calculate percentage score
             const percentageScore = Math.round((score / quizQuestions.length) * 100);
             
